@@ -13,7 +13,7 @@ apps:
   go-langserver:
     command: go-langserver
     plugs:
-      - network
+      - network-bind
       - home
 
 parts:
