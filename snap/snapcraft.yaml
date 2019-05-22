@@ -6,6 +6,7 @@ description: |
   Protocol. It supports editor features such as go-to-definition, hover,
   and find-references for Go projects.
 
+base: core18
 grade: stable
 confinement: strict
 
@@ -21,3 +22,6 @@ parts:
     plugin: go
     go-packages:
       - github.com/sourcegraph/go-langserver
+    build-packages:
+      - git
+      - gcc
