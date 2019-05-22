@@ -1,0 +1,23 @@
+name: go-langserver
+version: '0.1'
+summary: Go Language Server
+description: |
+  go-langserver is a language server for Go that speaks Language Server
+  Protocol. It supports editor features such as go-to-definition, hover,
+  and find-references for Go projects.
+
+grade: stable
+confinement: strict
+
+apps:
+  go-langserver:
+    command: go-langserver
+    plugs:
+      - network
+      - home
+
+parts:
+  go-langserver:
+    plugin: go
+    go-packages:
+      - github.com/sourcegraph/go-langserver
